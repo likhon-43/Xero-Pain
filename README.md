@@ -45,16 +45,7 @@ Reinstalling Windows is painful: you lose your drivers, hunt down installers, an
 
 ## Quick start
 
-1. Download `xero.bat` (or clone the repo).
-2. Double-click `xero.bat`.
-3. Accept the UAC prompt.
-4. Pick an option from the menu.
-
-```bash
-git clone https://github.com/<your-username>/XERO.git
-cd XERO
-xero.bat
-```
+Just Open it and you are good to go..
 
 ## Menu
 
@@ -67,21 +58,7 @@ xero.bat
 [0]  Exit
 ```
 
-### 1. Backup drivers
-Exports all third-party drivers to `XERO_Backup\Drivers` next to the script, using:
 
-```
-dism /online /export-driver /destination:"XERO_Backup\Drivers"
-```
-
-### 2. Restore drivers
-Installs the drivers from a folder. Press Enter to use the default backup folder, or type or drag in another one:
-
-```
-pnputil /add-driver "<folder>\*.inf" /subdirs /install
-```
-
-A reboot is recommended afterward.
 
 ### 3. Install essential apps
 Choose **all at once** or **one by one**. In one-by-one mode you get a numbered list. Enter numbers separated by spaces or commas (for example `1 4 9`), or `A` for everything. A failed install never stops the rest, and you get a summary at the end.
